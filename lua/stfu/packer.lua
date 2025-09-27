@@ -1,19 +1,19 @@
 -- This file can be loaded by calling `lua require('plugins')` from your init.vim
 
--- Only required if you have packer configured as `opt`
-
 return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
 
+    use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+    
+    -------- F*** YAVA LSP ---------
+    use 'mfussenegger/nvim-jdtls'
+
     use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.2',
+        'nvim-telescope/telescope.nvim', tag = '0.1.8',
         -- or                            , branch = '0.1.x',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
-:
-    use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
-
     use('mbbill/undotree')
 
     use ('tpope/vim-fugitive')
@@ -44,7 +44,7 @@ return require('packer').startup(function(use)
          end
          })
 
-        -- toggleterm
+
         use {
             "akinsho/toggleterm.nvim", tag = '*', 
             config = function()

@@ -3,9 +3,6 @@ local lsp = require("lsp-zero")
 lsp.preset("recommended")
 
 lsp.ensure_installed({
-    'gopls',
-    'rust_analyzer',
-    'templ'
 })
 
 -- Fix Undefined global 'vim'
