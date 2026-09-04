@@ -1,3 +1,3 @@
-require("stfu.remap")
-require("stfu.opacity")
 require("stfu.set")
+require("stfu.remap")
+require("stfu.lazy")
